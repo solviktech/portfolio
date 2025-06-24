@@ -4,19 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dragon Umrah</title>
-  <!-- Google Fonts: Poppins -->
+
+  <!-- ✅ 引入 Google Fonts 字体（Poppins） -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- ✅ 引入样式表 -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- ✅ 顶部导航栏：固定顶部 + 透明背景 + 模糊效果 -->
   <header class="main-header">
-    <nav class="navbar">
+    <nav class="nav-container">
+      <!-- Logo 部分 -->
       <div class="logo">
         <img src="assets/images/logo.png" alt="Dragon Umrah Logo" />
       </div>
-      <ul class="nav-links">
+      
+      <!-- 导航菜单链接 -->
+      <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+      <ul class="nav-menu">
         <li><a href="#hero">Home</a></li>
         <li><a href="#about">About Us</a></li>
         <li><a href="#services">Service</a></li>
@@ -28,11 +35,12 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- ✅ Hero Section：背景图 + 叠层 + CTA按钮 -->
   <section class="hero-section" id="hero">
-    <!-- 黑色透明遮罩 -->
+    <!-- 背景图遮罩层 -->
     <div class="hero-overlay-bg"></div>
 
+    <!-- 文本和按钮层 -->
     <div class="hero-overlay">
       <div class="hero-logo">
         <img src="assets/images/logo.png" alt="Dragon Umrah Logo" />
@@ -46,14 +54,14 @@
     </div>
   </section>
 
-  <!-- Umrah Section -->
+  <!-- ✅ Umrah Section -->
   <section class="umrah-section" id="umrah">
     <h2>Your trusted partner for Umrah journeys</h2>
     <p>We specialize in providing seamless, culturally familiar Umrah experiences for travelers from across the globe.</p>
     <p>From airport pickups to hotel stays, meals and ziyarat – everything is handled with care and respect.</p>
   </section>
 
-  <!-- Services Section -->
+  <!-- ✅ Services Section -->
   <section class="services-section" id="services">
     <h2>Our Services</h2>
     <div class="service-cards">
@@ -72,7 +80,17 @@
     </div>
   </section>
 
-  <!-- FAQ, Testimonials, Contact 等保留原结构或后续添加 -->
+  <!-- ✅ 后续内容预留：FAQ, Testimonials, Contact -->
+
+  <!-- ✅ 移动端菜单切换脚本 -->
+  <script>
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    toggleBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+  </script>
 
 </body>
 </html>
