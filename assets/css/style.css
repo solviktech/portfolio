@@ -156,3 +156,36 @@ nav {
   max-width: 300px;
   text-align: left;
 }
+.testimonials-section {
+  padding: 40px 20px;
+  background-color: #111;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.testimonial-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.testimonial {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial h4 {
+  margin-top: 15px;
+  font-weight: normal;
+  color: #ccc;
+}
