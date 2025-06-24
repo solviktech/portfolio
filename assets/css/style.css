@@ -263,6 +263,8 @@ html {
   .nav-menu.show {
     display: flex;
   }
+  .hero-section {
+  padding-top: 100px;
 }
 
 /* === Hero Section === */
