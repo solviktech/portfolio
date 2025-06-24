@@ -273,11 +273,12 @@ html {
   background: url('../images/hero.jpg') no-repeat center center/cover;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding-top: 80px; /* 避免导航栏遮挡 */
 }
-
 .hero-overlay {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 40px 20px;
@@ -393,4 +394,10 @@ html {
 .main-header.scrolled {
   background-color: rgba(0, 0, 0, 0.9); /* 滚动时更深背景 */
   transition: background-color 0.3s ease;
+}
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
 }
