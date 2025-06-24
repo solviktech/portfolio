@@ -1,3 +1,7 @@
+/* === 基础设置 === */
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: #111;
   color: white;
@@ -6,245 +10,48 @@ body {
   padding: 0;
 }
 
-nav {
-  background-color: #000;
-  padding: 20px;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li a {
-  color: white;
-  text-decoration: none;
-}
-
-.hero img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-}
-.umrah-section {
-  background-color: #000;
-  color: #fff;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.umrah-section h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-.umrah-section p {
-  font-size: 18px;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto 12px;
-  color: #ccc;
-}
-.services-section {
-  background-color: #111;
-  color: #fff;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.services-section h2 {
-  font-size: 28px;
-  margin-bottom: 40px;
-}
-
-.service-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.card {
-  background-color: #222;
-  border-radius: 10px;
-  padding: 24px;
-  max-width: 280px;
-  flex: 1;
-  min-width: 240px;
-}
-
-.card h3 {
-  font-size: 20px;
-  margin-bottom: 12px;
-}
-
-.card p {
-  font-size: 16px;
-  color: #ccc;
-}
-.cta-section {
-  background-color: #1a1a1a;
-  color: #fff;
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.cta-section h2 {
-  font-size: 26px;
-  margin-bottom: 16px;
-}
-
-.cta-section p {
-  font-size: 18px;
-  margin-bottom: 24px;
-  color: #ccc;
-}
-
-.cta-button {
-  background-color: #25D366;
-  color: #fff;
-  text-decoration: none;
-  padding: 14px 28px;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #1ebc5a;
-}
-.why-us-section {
-  background-color: #111;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.why-us-section h2 {
-  font-size: 28px;
-  margin-bottom: 30px;
-}
-
-.why-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.why-card {
-  background-color: #222;
-  border-radius: 12px;
-  padding: 20px;
-  max-width: 300px;
-  text-align: left;
-}
-.testimonials-section {
-  padding: 40px 20px;
-  background-color: #111;
-  text-align: center;
-}
-
-.testimonials-section h2 {
-  font-size: 28px;
-  margin-bottom: 30px;
-  color: white;
-}
-
-.testimonial-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-}
-
-.testimonial {
-  background-color: #222;
-  color: white;
-  padding: 20px;
-  border-radius: 12px;
-  max-width: 600px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.testimonial h4 {
-  margin-top: 15px;
-  font-weight: normal;
-  color: #ccc;
-}
-/* Footer Section */
-.footer {
-  background-color: #111111;
-  color: #ffffff;
-  text-align: center;
-  padding: 40px 20px;
-  font-size: 14px;
-  line-height: 1.6;
-}
-html {
-  scroll-behavior: smooth;
-}
-/* === Header & Navigation === */
+/* === 顶部导航栏 === */
 .main-header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* 半透明背景 */
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
   z-index: 1000;
-  backdrop-filter: blur(10px); /* 模糊效果 */
+  transition: background-color 0.3s ease;
 }
-
+.main-header.scrolled {
+  background-color: rgba(0, 0, 0, 0.9);
+}
 .nav-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 12px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 16px 20px;
 }
-
 .logo img {
   height: 40px;
 }
-
 .menu-toggle {
   display: none;
   font-size: 28px;
   color: white;
   background: none;
   border: none;
+  cursor: pointer;
 }
-
 .nav-menu {
-  list-style: none;
   display: flex;
+  list-style: none;
   gap: 20px;
 }
-
 .nav-menu li a {
   color: white;
   text-decoration: none;
   font-weight: 500;
 }
-
-/* Responsive Menu */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -259,12 +66,11 @@ html {
     padding: 20px;
     border-radius: 8px;
     width: 200px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   }
   .nav-menu.show {
     display: flex;
   }
-  .hero-section {
-  padding-top: 100px;
 }
 
 /* === Hero Section === */
@@ -277,24 +83,27 @@ html {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 80px; /* 避免导航栏遮挡 */
+  padding-top: 100px;
 }
 .hero-overlay {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 40px 20px;
   border-radius: 12px;
 }
-
 .hero-title {
   font-size: 32px;
   color: white;
   margin-bottom: 12px;
 }
-
 .hero-subtitle {
   color: #ccc;
   font-size: 18px;
   margin-bottom: 24px;
+}
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
 }
 .hero-button {
   padding: 12px 24px;
@@ -302,112 +111,174 @@ html {
   font-weight: 600;
   border-radius: 30px;
   text-decoration: none;
-  transition: all 0.3s ease;
   border: none;
   color: #111;
-  background-color: #cbd5e1; /* 浅灰蓝，视觉参考 Tailwind slate-300 */
-  display: inline-block;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 增加轻微立体感 */
+  background-color: #cbd5e1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 .hero-button:hover {
-  background-color: #e2e8f0; /* hover 时变浅 */
+  background-color: #e2e8f0;
   color: #000;
   cursor: pointer;
 }
-
-  .hero-buttons {
-  display: flex;
-  gap: 16px;
-  margin-top: 24px;
-}
-
 .hero-button.secondary {
-  background-color: #94a3b8; /* slate-400 类灰蓝 */
+  background-color: #94a3b8;
   color: white;
 }
-
 .hero-button.secondary:hover {
-  background-color: #64748b; /* slate-600 hover效果 */
+  background-color: #64748b;
 }
-/* === Header Navigation === */
-.main-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 1000;
-  backdrop-filter: blur(10px);
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-.nav-container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 12px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* === Umrah Section === */
+.umrah-section {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
 }
-
-.logo img {
-  height: 40px;
-}
-
-.menu-toggle {
-  display: none;
+.umrah-section h2 {
   font-size: 28px;
-  color: white;
-  background: none;
-  border: none;
-  cursor: pointer;
+  margin-bottom: 20px;
+}
+.umrah-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 12px;
+  color: #ccc;
 }
 
-.nav-menu {
+/* === Services Section === */
+.services-section {
+  background-color: #111;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+.services-section h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+.service-cards {
   display: flex;
-  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
+.card {
+  background-color: #222;
+  border-radius: 10px;
+  padding: 24px;
+  max-width: 280px;
+  flex: 1;
+  min-width: 240px;
+}
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+.card p {
+  font-size: 16px;
+  color: #ccc;
+}
 
-.nav-menu li a {
+/* === Why Us Section === */
+.why-us-section {
+  background-color: #111;
   color: white;
-  text-decoration: none;
-  font-weight: 500;
+  padding: 40px 20px;
+  text-align: center;
+}
+.why-us-section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+.why-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.why-card {
+  background-color: #222;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 300px;
+  text-align: left;
 }
 
-/* === Responsive Navigation === */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-menu {
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    flex-direction: column;
-    background-color: #111;
-    padding: 20px;
-    border-radius: 8px;
-    width: 200px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  }
-  .nav-menu.show {
-    display: flex;
-  }
+/* === Testimonials Section === */
+.testimonials-section {
+  padding: 40px 20px;
+  background-color: #111;
+  text-align: center;
 }
-/* === Header Scrolled Style === */
-.main-header.scrolled {
-  background-color: rgba(0, 0, 0, 0.9); /* 滚动时更深背景 */
-  transition: background-color 0.3s ease;
+.testimonials-section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: white;
 }
-@media (max-width: 768px) {
-.hero-buttons {
+.testimonial-cards {
   display: flex;
   flex-direction: column;
+  gap: 20px;
   align-items: center;
-  gap: 16px;
-  margin-top: 24px;
 }
+.testimonial {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.testimonial h4 {
+  margin-top: 15px;
+  font-weight: normal;
+  color: #ccc;
+}
+
+/* === CTA Section === */
+.cta-section {
+  background-color: #1a1a1a;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+.cta-section h2 {
+  font-size: 26px;
+  margin-bottom: 16px;
+}
+.cta-section p {
+  font-size: 18px;
+  margin-bottom: 24px;
+  color: #ccc;
+}
+.cta-button {
+  background-color: #25D366;
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.cta-button:hover {
+  background-color: #1ebc5a;
+}
+
+/* === Footer Section === */
+.footer {
+  background-color: #111111;
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 14px;
+  line-height: 1.6;
 }
