@@ -388,3 +388,8 @@ html {
     display: flex;
   }
 }
+/* === Header Scrolled Style === */
+.main-header.scrolled {
+  background-color: rgba(0, 0, 0, 0.9); /* 滚动时更深背景 */
+  transition: background-color 0.3s ease;
+}
