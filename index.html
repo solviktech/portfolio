@@ -91,6 +91,19 @@
       navMenu.classList.toggle('show');
     });
   </script>
+  
+<!-- index.html 中 -->
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<ul class="nav-links">
+  <li><a href="#">Home</a></li>
+  ...
+</ul>
 
+<script>
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('show');
+  }
+</script>
 </body>
 </html>
