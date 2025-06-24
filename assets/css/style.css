@@ -290,35 +290,42 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: rgba(0, 0, 0, 0.9);
+  padding: 10px 16px;
+  background-color: #000;
   position: fixed;
-  width: 100%;
   top: 0;
   left: 0;
+  right: 0;
   z-index: 1000;
 }
 
 .logo img {
-  height: 40px;
+  height: 36px;
 }
 
+/* 保证文字在中间对齐 */
 .brand-title {
-  flex: 1;
+  flex-grow: 1;
   text-align: center;
-  font-size: 18px;
-  font-weight: 600;
   color: white;
+  font-size: 16px;
+  font-weight: 600;
   font-family: 'Poppins', sans-serif;
-  letter-spacing: 1px;
 }
 
+/* 汉堡按钮靠右 */
 .menu-toggle {
   font-size: 24px;
-  background: none;
-  border: none;
   color: white;
   cursor: pointer;
+  background: none;
+  border: none;
   padding: 8px;
-  z-index: 1010; /* 确保不被遮挡 */
+}
+.nav-menu {
+  display: none;
+}
+
+.nav-menu.open {
+  display: block;
 }
