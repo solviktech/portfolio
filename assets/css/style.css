@@ -43,3 +43,22 @@ nav {
   height: auto;
   border-radius: 12px;
 }
+.umrah-section {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.umrah-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.umrah-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 12px;
+  color: #ccc;
+}
