@@ -15,14 +15,16 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);  /* ✅ 原来是 0.6 或 0.9，可以调轻一点 */
-  backdrop-filter: blur(12px);           /* ✅ 模糊再柔和一些 */
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
   z-index: 1000;
   transition: background-color 0.3s ease;
 }
+
 .main-header.scrolled {
   background-color: rgba(0, 0, 0, 0.9);
 }
+
 .nav-container {
   max-width: 960px;
   margin: 0 auto;
@@ -31,9 +33,11 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
 .logo img {
   height: 40px;
 }
+
 .menu-toggle {
   display: none;
   font-size: 28px;
@@ -42,16 +46,18 @@ body {
   border: none;
   cursor: pointer;
 }
+
 .nav-menu {
   display: flex;
   list-style: none;
   gap: 20px;
+  padding: 0;
+  margin: 0;
 }
+
 .nav-menu li a {
   color: white;
   text-decoration: none;
-  font-weight: 500;
-  .nav-menu li a {
   font-family: 'Poppins', 'Helvetica Neue', sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -62,7 +68,7 @@ body {
 .nav-menu li a:hover {
   color: #94a3b8;
 }
-}
+
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -77,7 +83,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     width: 200px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   }
   .nav-menu.show {
     display: flex;
@@ -93,13 +99,11 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 100px 20px 40px;  /* ✅ 添加顶部内边距，让出导航栏位置 */
+  padding: 140px 20px 40px; /* 顶部空出导航栏 */
   color: white;
   overflow: hidden;
 }
-.hero-section {
-  padding-top: 100px;  /* 避开固定导航栏 */
-}
+
 .hero-overlay-bg {
   position: absolute;
   top: 0;
