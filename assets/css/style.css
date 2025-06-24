@@ -316,6 +316,21 @@ html {
   color: #000;
   cursor: pointer;
 }
+
+  .hero-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.hero-button.secondary {
+  background-color: #94a3b8; /* slate-400 类灰蓝 */
+  color: white;
+}
+
+.hero-button.secondary:hover {
+  background-color: #64748b; /* slate-600 hover效果 */
+}
 /* === Header Navigation === */
 .main-header {
   position: fixed;
@@ -378,7 +393,6 @@ html {
     width: 200px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   }
-
   .nav-menu.show {
     display: flex;
   }
