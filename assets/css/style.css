@@ -286,3 +286,39 @@ body {
   background-color: #111111;
   color: #ffffff;
 }
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.brand-title {
+  flex: 1;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+}
+
+.menu-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1010; /* 确保不被遮挡 */
+}
