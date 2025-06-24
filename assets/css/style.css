@@ -15,8 +15,8 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.5);  /* ✅ 原来是 0.6 或 0.9，可以调轻一点 */
+  backdrop-filter: blur(12px);           /* ✅ 模糊再柔和一些 */
   z-index: 1000;
   transition: background-color 0.3s ease;
 }
