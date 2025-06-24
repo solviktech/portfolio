@@ -295,23 +295,19 @@ html {
   font-size: 18px;
   margin-bottom: 24px;
 }
-
-.hero-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: center;
-}
-
 .hero-button {
-  padding: 12px 28px;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
   text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+  color: white;
+  background-color: transparent;
   display: inline-block;
+  text-align: center;
 }
-
 .hero-button.primary {
   background-color: #25D366;
   color: white;
@@ -320,6 +316,11 @@ html {
 .hero-button.secondary {
   background-color: #555;
   color: white;
+}
+
+.hero-button.secondary:hover {
+  background: white;
+  color: black;
 }
 /* === Header Navigation === */
 .main-header {
