@@ -303,25 +303,18 @@ html {
   border-radius: 30px;
   text-decoration: none;
   transition: all 0.3s ease;
-  border: 2px solid white;
-  color: white;
-  background-color: transparent;
+  border: none;
+  color: #111;
+  background-color: #cbd5e1; /* 浅灰蓝，视觉参考 Tailwind slate-300 */
   display: inline-block;
   text-align: center;
-}
-.hero-button.primary {
-  background-color: #25D366;
-  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 增加轻微立体感 */
 }
 
-.hero-button.secondary {
-  background-color: #555;
-  color: white;
-}
-
-.hero-button.secondary:hover {
-  background: white;
-  color: black;
+.hero-button:hover {
+  background-color: #e2e8f0; /* hover 时变浅 */
+  color: #000;
+  cursor: pointer;
 }
 /* === Header Navigation === */
 .main-header {
