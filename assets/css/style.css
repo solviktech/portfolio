@@ -329,3 +329,9 @@ body {
 .nav-menu.open {
   display: block;
 }
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
